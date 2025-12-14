@@ -57,9 +57,12 @@ function getColor()
     return document.querySelector('#colorPick').value;
 }
 
-function setGoals()
+function setBoard()
 {
     document.querySelector('#button1').value = "true";
+}
+function setColor()
+{
     document.getElementById('colorPick').disabled = true;
 }
 
