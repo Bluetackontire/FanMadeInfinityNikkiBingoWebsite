@@ -75,26 +75,21 @@
             onclick="changeBackgroundColor('box25', getColor())">25</button>
 </div>
 
-<div>
-    <p>The 'Set Board' button locks the board so it cannot be randomized and locks the
-        color. So if you wanted to do multiplayer (on the same device/page)
-        then you SHOULD NOT click this button.</p>
-</div>
-
 <div class="buttongroup">
     <button onclick="getRandomGoals(value)" class="button" id="button1" value="false">
         Randomize</button>
-    <button onclick="setGoals()" class="button" id="button2">Set Board</button>
+    <button onclick="setBoard()" class="button" id="button2">Set Board</button>
 </div>
 
 <div class="dropdown">
-    <label for="colorPick">Pick a color</label>
+    <label for="colorPick" style="font-size: 21px">Pick a color</label>
     <select name="colorPick" id="colorPick" disabled>
         <option value="red">Red</option>
         <option value="blue">Blue</option>
         <option value="green">Green</option>
         <option value="yellow">Yellow</option>
     </select>
+    <button onclick="setColor()" class="button">Set Color</button>
 </div>
 
 <div style="padding: 10px;">
