@@ -30,11 +30,27 @@ function changeBackgroundColor(id, color)
 {
     if (document.getElementById(id).value == 'empty')
     {
-        document.getElementById(id).style.backgroundColor = color;
+        if (color == 'nikki')
+        {
+            document.getElementById(id).style.backgroundImage = "url(nikki.png)";
+            document.getElementById(id).style.backgroundSize = "cover";
+            document.getElementById(id).style.backgroundRepeat = "no-repeat";
+        }
+        else if (color == 'momo')
+        {
+            document.getElementById(id).style.backgroundImage = "url(momo.png)";
+            document.getElementById(id).style.backgroundSize = "cover";
+            document.getElementById(id).style.backgroundRepeat = "no-repeat";
+        }
+        else
+        {
+            document.getElementById(id).style.backgroundColor = color;
+        }
         document.getElementById(id).value = color;
     }
     else if (document.getElementById(id).value == color)
     {
+        document.getElementById(id).style.backgroundImage = "";
         document.getElementById(id).style.backgroundColor = 'transparent';
         document.getElementById(id).value = 'empty';
     }
